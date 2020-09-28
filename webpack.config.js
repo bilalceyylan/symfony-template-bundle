@@ -25,6 +25,11 @@ Encore
         from: './assets/images',
         to: 'images/[path][name].[ext]'
     })
+    .copyFiles({
+        from: './node_modules/@typo3/icons/dist',
+        pattern: /\.(svg|json)$/,
+        to: 'icons/[path][name].[ext]'
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();
